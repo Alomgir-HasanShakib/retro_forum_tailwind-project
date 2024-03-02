@@ -1,30 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        <nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Forum</title>
+    <!-- font awsome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- tailwind and daisy ui link here  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="container mx-auto mulish-font mb-24">
+      <!-- navbar section  -->
+      <nav>
+        <div>
+          <div class="navbar bg-base-100 lg:flex lg:justify-between">
+            <div class="start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16"
+                    />
+                  </svg>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                >
+                  <div class="flex flex-col gap-2 items-center">
+                    <div
+                      class="bg-gray-200 py-3 px-4 rounded-full border border-gray-400"
+                    >
+                      <i class="fa-solid fa-house"></i>
+                    </div>
+                    <div
+                      class="bg-gray-200 py-3 px-4 rounded-full border border-gray-400"
+                    >
+                      <i class="fa-solid fa-pen"></i>
+                    </div>
+                    <div
+                      class="bg-gray-200 py-3 px-4 rounded-full border border-gray-400"
+                    >
+                      <i class="fa-solid fa-user-plus"></i>
+                    </div>
+                    <div
+                      class="bg-gray-200 py-3 px-4 rounded-full border border-gray-400"
+                    >
+                      <i class="fa-regular fa-flag"></i>
+                    </div>
+                    <button
+                      class="btn bg-indigo-400 text-white px-6 rounded-full text-xl font-bold"
+                    >
+                      Sign In
+                    </button>
+                  </div>
+                </ul>
+              </div>
 
-        </nav>
-        <!-- banner sections  -->
-        <section class="banner-section">
+              <a class="font-extrabold text-4xl">News Forum</a>
+            </div>
 
-        </section>
+            <div class="">
+              <div>
+                <div class="hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1">
+                    <div class="flex gap-4">
+                      <div
+                        class="bg-gray-200 py-3 px-4 rounded-full border border-gray-400"
+                      >
+                        <i class="fa-solid fa-house"></i>
+                      </div>
+                      <div
+                        class="bg-gray-200 py-3 px-4 rounded-full border border-gray-400"
+                      >
+                        <i class="fa-solid fa-pen"></i>
+                      </div>
+                      <div
+                        class="bg-gray-200 py-3 px-4 rounded-full border border-gray-400"
+                      >
+                        <i class="fa-solid fa-user-plus"></i>
+                      </div>
+                      <div
+                        class="bg-gray-200 py-3 px-4 rounded-full border border-gray-400"
+                      >
+                        <i class="fa-regular fa-flag"></i>
+                      </div>
+                      <button
+                        class="btn bg-indigo-400 text-white px-10 rounded-full text-xl font-bold"
+                      >
+                        Sign In
+                      </button>
+                    </div>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- banner sections  -->
+      <section class="banner-section mt-10 ">
+        <div class="bg-[#12132D] rounded-lg">
+          <div
+            class="hero min-h-scree"
+            style="
+              background: url(./images/bgbanner.png);
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+            "
+          >
+            <div class=""></div>
+            <div class="hero-content text-neutral-content p-24">
+                <!-- main content start here  -->
+              <div class="flex gap-16 justify-between">
+                <div class="left-col text-white space-y-5">
+                  <h2 class="text-6xl font-[900]">
+                    Welcome to the <br />
+                    <span class="text-[#797dfc]">ReTro</span>
+                    Forum
+                  </h2>
+                  <p class="text-[#FFFFFFCC] text-xl font-medium">
+                    Share your favorite opinion and win and wp <br />
+                    forum coffee mug!
+                  </p>
+                  <div
+                    class="input-field bg-white pl-3 flex justify-between rounded-full"
+                  >
+                    <input
+                      type="text"
+                      placeholder="Search here anything"
+                      class="border-none outline-none rounded-full px-4 text-[#12132DCC]"
+                    />
+                    <button
+                      class="btn bg-indigo-500 rounded-full px-7 text-white"
+                    >
+                      Search
+                    </button>
+                  </div>
+                </div>
+                <div class="right-col text-2xl font-medium bg-white p-10 rounded-lg">
+                  <div class="content space-y-3 text-[#12132DCC]">
+                    <div class="flex justify-between gap-10">
+                      <h2>Registered Users</h2>
+                      <p>01</p>
+                    </div>
+                    <div class="flex justify-between">
+                      <h2>Forum</h2>
+                      <p>05</p>
+                    </div>
+                    <div class="flex justify-between">
+                      <h2>Topic</h2>
+                      <p>01</p>
+                    </div>
+                    <div class="flex justify-between">
+                      <h2>Replies</h2>
+                      <p>01</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </header>
     <!-- main content section  -->
-    <main>
-
-    </main>
+    <main></main>
     <!-- footer sections  -->
-    <footer>
-
-    </footer>
+    <footer></footer>
 
     <!-- javascripts file link here  -->
     <script src="./scripts/script.js"></script>
-</body>
+  </body>
 </html>
