@@ -83,7 +83,14 @@
                 </ul>
               </div>
 
-              <a class="font-extrabold text-4xl">News Forum</a>
+              <a class="font-bold text-4xl"
+                ><span class="inter-font"
+                  >Ne<span class="text-indigo-500">w</span>s</span
+                >
+                Fo<span style="font-family: Fira Code" class="text-indigo-500"
+                  >R</span
+                >um</a
+              >
             </div>
 
             <div class="">
@@ -157,11 +164,13 @@
                     class="input-field bg-white pl-3 flex justify-between rounded-full"
                   >
                     <input
+                      id="search-input"
                       type="text"
                       placeholder="Search here anything"
                       class="border-none outline-none rounded-full lg:px-4 text-[#12132DCC]"
                     />
                     <button
+                      onclick="searchHandler()"
                       class="btn bg-indigo-500 rounded-full lg:px-7 text-white"
                     >
                       Search
@@ -212,16 +221,14 @@
         <div id="loader" class="text-center transform translate-y-40">
           <span class="loading loading-infinity loading-lg"></span>
         </div>
+
         <!-- loader  -->
         <!-- main content here  -->
         <div class="flex flex-col lg:flex-row justify-between gap-7 mt-16">
-          <div id="active-data-container">
-           
-           
-          </div>
-          
+          <div id="active-data-container"></div>
+
           <div id="mark-as-read-container ">
-            <div class="right-col bg-[#12132D0D] p-5 rounded-lg ">
+            <div class="right-col bg-[#12132D0D] p-5 rounded-lg">
               <!-- header title area  -->
               <div class="flex justify-between lg:gap-10">
                 <div>
@@ -230,14 +237,12 @@
                 <div class="flex justify-between gap-2 items-center">
                   <img src="./images/Framecheck.png" class="w-[24px]" alt="" />
                   <p class="inter-font text-[#12132D99] text-sm">
-                    Mark As Read (<span id='read-count'>0</span>)
+                    Mark As Read (<span id="read-count">0</span>)
                   </p>
                 </div>
               </div>
               <!-- body  -->
-              <div id="mark-container">
-
-              </div>
+              <div id="mark-container"></div>
             </div>
           </div>
         </div>
@@ -277,91 +282,14 @@
             integrated testing features allow for a streamlined .
           </p>
         </div>
-        <!-- main content here  -->
-        <div class="grid grid-cols-1 gap-5 lg:grid-cols-3">
-          <div class="card card-compact max-w-96 bg-base-100 shadow-xl">
-            <figure class="p-3">
-              <img
-                class="rounded-lg"
-                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                alt="Shoes"
-              />
-            </figure>
-            <div class="card-body space-y-2">
-              <p class="text-[#12132D99]">
-                <i class="fa-solid fa-calendar-days pr-2"></i>29 January 2024
-              </p>
-              <h2 class="text-[#12132D] text-[18px] font-extrabold">
-                What will a mars habitat force that impact in our daily life!!!
-              </h2>
-              <p class="text-[#12132D99]">
-                Yes, you can run unit tests and view the results directly within
-                the app.
-              </p>
-              <div class="card-actions">
-                <img src="./images/logo.png" class="rounded-full" alt="" />
-                <div>
-                  <h4 class="font-bold text-[#12132D]">Cameron Williamson</h4>
-                  <p class="text-[#12132D99]">Unknown</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card card-compact max-w-96 bg-base-100 shadow-xl">
-            <figure class="p-3">
-              <img
-                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                alt="Shoes"
-              />
-            </figure>
-            <div class="card-body space-y-2">
-              <p class="text-[#12132D99]">
-                <i class="fa-solid fa-calendar-days pr-2"></i>29 January 2024
-              </p>
-              <h2 class="text-[#12132D] text-[18px] font-extrabold">
-                What will a mars habitat force that impact in our daily life!!!
-              </h2>
-              <p class="text-[#12132D99]">
-                Yes, you can run unit tests and view the results directly within
-                the app.
-              </p>
-              <div class="card-actions">
-                <img src="./images/logo.png" class="rounded-full" alt="" />
-                <div>
-                  <h4 class="font-bold text-[#12132D]">Cameron Williamson</h4>
-                  <p class="text-[#12132D99]">Unknown</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card card-compact max-w-96 bg-base-100 shadow-xl">
-            <figure class="p-3">
-              <img
-                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                alt="Shoes"
-              />
-            </figure>
-            <div class="card-body space-y-2">
-              <p class="text-[#12132D99]">
-                <i class="fa-solid fa-calendar-days pr-2"></i>29 January 2024
-              </p>
-              <h2 class="text-[#12132D] text-[18px] font-extrabold">
-                What will a mars habitat force that impact in our daily life!!!
-              </h2>
-              <p class="text-[#12132D99]">
-                Yes, you can run unit tests and view the results directly within
-                the app.
-              </p>
-              <div class="card-actions">
-                <img src="./images/logo.png" class="rounded-full" alt="" />
-                <div>
-                  <h4 class="font-bold text-[#12132D]">Cameron Williamson</h4>
-                  <p class="text-[#12132D99]">Unknown</p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div id="loaders" class="text-center transform translate-y-16">
+          <span class="loading loading-infinity loading-lg "></span>
         </div>
+        <!-- main content here  -->
+        <div
+          id="main-content-container"
+          class="grid grid-cols-1 gap-5 lg:grid-cols-3"
+        ></div>
       </section>
     </main>
     <!-- footer sections  -->
