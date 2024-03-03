@@ -49,26 +49,31 @@
                   class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
                 >
                   <div class="flex flex-col gap-2 items-center">
-                    <div
-                      class="bg-gray-200 py-3 px-4 rounded-full border border-gray-400"
+                    <button
+                      class="bg-gray-200 py-3 px-4 rounded-full border btn tooltip border-gray-400"
+                      data-tip="Home"
                     >
                       <i class="fa-solid fa-house"></i>
-                    </div>
-                    <div
-                      class="bg-gray-200 py-3 px-4 rounded-full border border-gray-400"
+                    </button>
+                    <button
+                      class="bg-gray-200 py-3 px-4 rounded-full border btn tooltip border-gray-400"
+                      data-tip="Post"
                     >
                       <i class="fa-solid fa-pen"></i>
-                    </div>
-                    <div
-                      class="bg-gray-200 py-3 px-4 rounded-full border border-gray-400"
+                    </button>
+                    <button
+                      class="bg-gray-200 py-3 px-4 rounded-full border btn tooltip border-gray-400"
+                      data-tip="Add a User"
                     >
-                      <i class="fa-solid fa-user-plus"></i>
-                    </div>
-                    <div
-                      class="bg-gray-200 py-3 px-4 rounded-full border border-gray-400"
+                      <a href=""> <i class="fa-solid fa-user-plus"></i></a>
+                    </button>
+                    <button
+                      class="bg-gray-200 py-3 px-4 rounded-full border btn tooltip border-gray-400 btn"
+                      data-tip="Report A problem"
                     >
                       <i class="fa-regular fa-flag"></i>
-                    </div>
+                    </button>
+
                     <button
                       class="btn bg-indigo-400 text-white px-6 rounded-full text-xl font-bold"
                     >
@@ -86,26 +91,30 @@
                 <div class="hidden lg:flex">
                   <ul class="menu menu-horizontal px-1">
                     <div class="flex gap-4">
-                      <div
-                        class="bg-gray-200 py-3 px-4 rounded-full border border-gray-400"
+                      <button
+                        class="bg-gray-200 py-3 px-4 rounded-full border btn tooltip border-gray-400"
+                        data-tip="Home"
                       >
                         <i class="fa-solid fa-house"></i>
-                      </div>
-                      <div
-                        class="bg-gray-200 py-3 px-4 rounded-full border border-gray-400"
+                      </button>
+                      <button
+                        class="bg-gray-200 py-3 px-4 rounded-full border btn tooltip border-gray-400"
+                        data-tip="Post"
                       >
                         <i class="fa-solid fa-pen"></i>
-                      </div>
-                      <div
-                        class="bg-gray-200 py-3 px-4 rounded-full border border-gray-400"
+                      </button>
+                      <button
+                        class="bg-gray-200 py-3 px-4 rounded-full border btn tooltip border-gray-400"
+                        data-tip="Add a User"
                       >
                         <i class="fa-solid fa-user-plus"></i>
-                      </div>
-                      <div
-                        class="bg-gray-200 py-3 px-4 rounded-full border border-gray-400"
+                      </button>
+                      <button
+                        class="bg-gray-200 py-3 px-4 rounded-full border btn tooltip border-gray-400 btn tooltip"
+                        data-tip="report a problem"
                       >
                         <i class="fa-regular fa-flag"></i>
-                      </div>
+                      </button>
                       <button
                         class="btn bg-indigo-400 text-white px-10 rounded-full text-xl font-bold"
                       >
@@ -377,7 +386,7 @@
           </p>
         </div>
         <!-- main content here  -->
-        <div class="grid grid-cols-1 lg:grid-cols-3">
+        <div class="grid grid-cols-1 gap-5 lg:grid-cols-3">
           <div class="card card-compact max-w-96 bg-base-100 shadow-xl">
             <figure class="p-3">
               <img
@@ -522,7 +531,7 @@
             </a>
           </div>
         </nav>
-        <hr class="w-full h-4"/>
+        <hr class="w-full h-4" />
         <p>Copyright © 2024 - All right reserved</p>
       </footer>
     </footer>
