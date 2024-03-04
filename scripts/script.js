@@ -24,7 +24,9 @@ const allPost = async () => {
         
         <div class="inside-left">
         <div class="avatar indicator">
-        <span class="indicator-item badge ${post.isActive === true ? "bg-green-500" : "bg-red-500"} rounded-full"></span> 
+        <span class="indicator-item badge ${
+          post.isActive === true ? "bg-green-500" : "bg-red-500"
+        } rounded-full"></span> 
         <div class="w-20 h-20 rounded-lg">
           <img alt="Tailwind CSS examples" src="${post.image}" />
         </div>
@@ -76,7 +78,6 @@ const allPost = async () => {
   }, 2000);
 };
 
-
 const completeRead = document.getElementById("mark-container");
 const counterTag = document.getElementById("read-count");
 let readCount = 0;
@@ -108,9 +109,6 @@ const searchHandler = () => {
   searchItem(inputValue);
 };
 
-
-
-
 const searchItem = async (value) => {
   const res = await fetch(
     ` https://openapi.programming-hero.com/api/retro-forum/posts?category=${value}`
@@ -134,16 +132,14 @@ const searchItem = async (value) => {
       postContainer.innerHTML = `
         
         <div class="inside-left">
-        <div class="avatar  ${
-          post.isActive === true ? "online" : "text-red-600"
-        }
-        ">
-          <div class="w-24 rounded-full">
-            <img
-              src="${post.image}"
-            />
-          </div>
+        <div class="avatar indicator">
+        <span class="indicator-item badge ${
+          post.isActive === true ? "bg-green-500" : "bg-red-500"
+        } rounded-full"></span> 
+        <div class="w-20 h-20 rounded-lg">
+          <img alt="Tailwind CSS examples" src="${post.image}" />
         </div>
+      </div>
       </div>
       <div class="inside-right">
         <div
